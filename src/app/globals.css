@@ -1,12 +1,22 @@
 *{margin: 0px; padding: 0px;}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     background: #111111;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .text-common{
   color: #fa5b0f;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #fa5b0f;
+  border-radius: 10px;
+
 }
 
 .btn-common{
@@ -53,6 +63,35 @@ body{
   width: 100%;
 }
 
+.hd{
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+}
+
+.hd span{
+  color: #fa5b0f;
+}
+
+.hd .title-bg{
+  color: rgb(255, 255, 255,0.07 )!important;
+  font-size: 100px;
+  position: absolute;
+  top: -26px;
+  right: 500px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+
+.hd .backhd span{
+  color: #fff;
+}
+
+.section{
+}
+
 .container-fluid{
   padding: 0px 40px;
 }
@@ -95,8 +134,8 @@ body{
   padding: 40px 100px;
 }
 .homePage .wrapper h1{
-  font-size: 55px;
-  font-weight: bolder !important;
+  font-size: 50px;
+  font-weight: 900 !important;
 }
 
 .homePage .wrapper .line{
@@ -112,6 +151,80 @@ body{
 .homePage .wrapper p{
   line-height: 30px;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 200;
   opacity: 0.7;
+}
+.aboutPage{
+  padding: 55px 0px;
+}
+.aboutPage h2{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.aboutwrapper{
+  padding: 0px 100px;
+}
+
+.aboutwrapper .part1 h4{
+  color: rgb(255, 255, 255,0.5 ); 
+  font-size: 20px;
+  margin-bottom: 15px ;
+}
+
+.aboutwrapper .part1 h4 span{
+  color: #fff;
+}
+
+.aboutwrapper .part2 .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.aboutwrapper .part2 .boxes .box{
+  width: 48%;
+  height: 150px;
+  border: 1px solid rgb(255, 255, 255,0.2 );
+  border-radius: 7px;
+  padding: 20px;
+}
+.aboutwrapper .part2 .boxes .box .count{
+  color: #fa5b0f;
+  font-size: 40px;
+  font-weight: 900;
+}
+.aboutwrapper .part2 .boxes .box .count span{
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  top: 10px;
+}
+.aboutwrapper .part2 .boxes .box h4{
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff;
+  opacity: 0.8;
+}
+.aboutwrapper .part2 .boxes .box .line{
+  display: block;
+  background: #fff;
+  opacity: 0.8;
+  width: 40px;
+  height: 1px;
+  position: relative;
+  top: 5px;
+  Right: 5px ;
+}
+
+.skillSection{
+  padding: 0px 100px;
+}
+
+.skillSection h2{
+  font-weight: 900;
+}
+
+.skillSection.counterSpiner{
+  width: 150px !important;
+  margin: auto;
 }
