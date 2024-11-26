@@ -155,15 +155,12 @@ body{
   opacity: 0.7;
 }
 .aboutPage{
-  padding: 55px 0px;
+  padding: 55px 100px;
 }
 .aboutPage h2{
   font-size: 25px;
   margin-bottom: 20px;
-}
-
-.aboutwrapper{
-  padding: 0px 100px;
+  font-weight: 900;
 }
 
 .aboutwrapper .part1 h4{
@@ -216,15 +213,35 @@ body{
   Right: 5px ;
 }
 
-.skillSection{
-  padding: 0px 100px;
-}
-
 .skillSection h2{
   font-weight: 900;
 }
 
-.skillSection.counterSpiner{
-  width: 150px !important;
+.skillSection .counterSpiner{
+  width: 120px !important;
   margin: auto;
+}
+
+.skillSection .col-md-3{
+  margin: 30px 0px;
+}
+
+.skillSection .col-md-3 h4{
+  font-size: 20px;
+}
+
+.divider{
+  width: 40%;
+  height: 1px;
+  background: rgb(255, 255, 255,0.1 );
+  margin: auto;
+}
+
+.experienceSection .box .badge{
+  background-color: #252525 !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  text-align: center;
+  padding: 7px 10px !important;
+
 }

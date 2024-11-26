@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 const About = () => {
-  const percentage = 66;
+  const percentage = 90;
   return (
     <section className="aboutPage">
       <div className="container-fluid">
@@ -117,25 +117,186 @@ const About = () => {
         </div>
 
         <br/>
+        <br/>
+
+        <div className="d-flex">
+          <span className="divider"></span>
+        </div>
 
         {/**skill section start-here */}
         <div className="skillSection mt-5">
             <h2 className="text-center text-white">MY SKILLS</h2>
 
             <div className="row">
-              <div className="col-md-3 d-flex">
-              <CircularProgressbar value={percentage} text={`${percentage}%`}
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={90} text={`${90}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
                 })} />;
-                <h4>HTML</h4>
+                <br/>
+                <h4 className="text-white text-center m-auto">AWS</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={60} text={`${60}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Node.js</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={80} text={`${80}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Python</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={90} text={`${90}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Docker</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={90} text={`${90}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Maven</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={60} text={`${60}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Terraform</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={70} text={`${70}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Ansible</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={60} text={`${60}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Kubernetes</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={80} text={`${80}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Jenkins</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={80} text={`${80}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">RHEL</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={95} text={`${95}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">GIT/GITHUB</h4>
+              </div>
+
+              <div className="col-md-3 d-flex flex-column">
+              <CircularProgressbar value={50} text={`${50}%`}
+                className="counterSpiner"
+                styles={buildStyles({
+                  pathColor: `#fa5b0f`,
+                  textColor: '#fff',
+                  trailColor: '#252525',
+                })} />;
+                <br/>
+                <h4 className="text-white text-center m-auto">Next.js</h4>
               </div>
             </div>
         </div>
         {/**skill section end-here */}
+        <br/>
+        <div className="d-flex">
+          <span className="divider"></span>
+        </div>
+        <br/>
+        <div className="experienceSection">
+          <h2 class="text-center text-white">EXPERIENCE & EDUCATION</h2>
+
+          <div className="row">
+            <div className="col-md-6">
+              <div className="box d-flex">
+                <div className="left">
+
+                </div>
+                <div className="right">
+                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <h4 className="text-white">DevOps Intern</h4>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
