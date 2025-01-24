@@ -14,7 +14,7 @@ export default function Home() {
           <div className="row align-items-center wrapper">
             <div className="col-md-4">
               <div className="imagwrap">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711768911103?e=1735776000&v=beta&t=eoKHfvSMFYeCnHt3prm6HeZ1s9RtOMxgg3iPKoh08wY" />
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711768911103?e=1743033600&v=beta&t=Xn4ne271SLX2wYV8sdsuvMK8_GvW_ttPuueW-zczk98" />
               </div>
             </div>
             <div className="col-md-8">

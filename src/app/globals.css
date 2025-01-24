@@ -163,6 +163,16 @@ body{
   font-weight: 900;
 }
 
+.aboutPage .hd .title-bg{
+  color:rgb(255,255,255,0.07)!important;
+  font-size: 135px;
+  position:absolute;
+  top: -49px;
+  left: 300px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+
 .aboutwrapper .part1 h4{
   color: rgb(255, 255, 255,0.5 ); 
   font-size: 20px;
@@ -237,11 +247,89 @@ body{
   margin: auto;
 }
 
+.experienceSection .box{
+  margin: 30px 0px;
+}
+
 .experienceSection .box .badge{
-  background-color: #252525 !important;
+  background: #252525 !important;
   color: #fff !important;
   border-radius: 10px !important;
   text-align: center;
   padding: 7px 10px !important;
 
+}
+
+.experienceSection .box h4{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.experienceSection .box h4 span{
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.experienceSection .box p{
+  font-size: 200;
+  opacity: 0.8;
+}
+
+.experienceSection .box .icon{
+  background-color: #fa5b0f;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.experienceSection .box .icon::after{
+  content: '';
+  width: 1px;
+  height: 85px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.experienceSection .box .icon svg{
+  color: #fff !important;
+}
+
+.experienceSection .box:hover .icon{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pl-4 {
+  padding-left: 1rem !important;
+}
+
+.portfolioPage {
+  padding: 45px 80px;
+}
+
+.portfolioPage .hd .title-bg{
+  color:rgb(255,255,255,0.07)!important;
+  font-size: 135px;
+  position:absolute;
+  top: -49px;
+  left: 350px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+
+.portfolioPage .wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.portfolioPage .wrapper .box{
+  width: 30%;
+  height: 180px;
+  background: #ccc;
+  border-radius: 10px;
 }

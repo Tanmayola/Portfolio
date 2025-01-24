@@ -4,6 +4,7 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import Button from "@mui/material/Button";
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 const About = () => {
   const percentage = 90;
   return (
@@ -280,19 +281,88 @@ const About = () => {
         </div>
         <br/>
         <div className="experienceSection">
-          <h2 class="text-center text-white">EXPERIENCE & EDUCATION</h2>
+          <h2 className="text-center text-white">EXPERIENCE & EDUCATION</h2>
 
           <div className="row">
             <div className="col-md-6">
               <div className="box d-flex">
                 <div className="left">
-
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
                 </div>
-                <div className="right">
+                <div className="right pl-4">
+                  <div className="badge badge-default">august 2022-august 2025</div>
+                  <h4 className="mt-3 mb-3">BCA - <span>University of Rajasthan</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
+                </div>
+              </div>
+
+              <div className="box d-flex">
+                <div className="left">
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
+                </div>
+                <div className="right pl-4">
                   <div className="badge badge-default">october 2023-May 2024</div>
-                  <h4 className="text-white">DevOps Intern</h4>
+                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
                 </div>
+              </div>
 
+              <div className="box d-flex">
+                <div className="left">
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
+                </div>
+                <div className="right pl-4">
+                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-6">
+              <div className="box d-flex">
+                <div className="left">
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
+                </div>
+                <div className="right pl-4">
+                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
+                </div>
+              </div>
+
+              <div className="box d-flex">
+                <div className="left">
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
+                </div>
+                <div className="right pl-4">
+                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
+                </div>
+              </div>
+
+              <div className="box d-flex">
+                <div className="left">
+                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                  <BusinessCenterIcon/>
+                  </span>
+                </div>
+                <div className="right pl-4">
+                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
+                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
+                </div>
               </div>
             </div>
           </div>
