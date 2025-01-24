@@ -89,8 +89,8 @@ body{
   color: #fff;
 }
 
-.section{
-}
+/* .section{
+} */
 
 .container-fluid{
   padding: 0px 40px;
@@ -332,4 +332,43 @@ body{
   height: 180px;
   background: #ccc;
   border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
+
+.portfolioPage .wrapper .box img{
+ width: 100% !important;
+ height: auto !important;
+ transition: all 0.3s ease-in-out;
+}
+
+.portfolioPage .wrapper .box .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolioPage .wrapper .box:hover img{
+  transform: scale(1.2);
+  rotate:(-10deg);
+}
+
+.portfolioPage .wrapper .box:hover .overlay{
+  opacity: 1;
+}
+
+.portfolioPage .wrapper .box .overlay .icon{
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* .portfolioPage .wrapper .box:hover .overlay .icon{
+} */
