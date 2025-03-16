@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import MailIcon from '@mui/icons-material/Mail';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -15,6 +16,16 @@ export default function Navigation() {
     { path: '/portfolio', icon: <WorkIcon />, label: 'Portfolio' },
     { path: '/contact', icon: <MailIcon />, label: 'Contact' }
   ];
+
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/TanmayOla_Resume.pdf'; // Make sure this matches your resume file name
+    link.download = 'TanmayOla_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <nav className="side-navigation">
@@ -30,6 +41,17 @@ export default function Navigation() {
             </Link>
           </li>
         ))}
+        <li>
+          <button 
+            onClick={handleDownload}
+            className="nav-link download-btn"
+          >
+            <span className="icon">
+              <FileDownloadIcon />
+            </span>
+            <span className="label">Download CV</span>
+          </button>
+        </li>
       </ul>
     </nav>
   );
