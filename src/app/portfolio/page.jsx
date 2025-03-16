@@ -1,3 +1,5 @@
+"use client";
+import Image from 'next/image';
 import LinkIcon from '@mui/icons-material/AttachFile';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -49,7 +51,14 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <div key={index} className="col-md-6 mb-4">
                 <div className="box position-relative">
-                  <img src={project.image} alt={project.title} className="w-100" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className="w-100"
+                    style={{ objectFit: 'cover' }}
+                  />
                   <div className="overlay d-flex flex-column align-items-center justify-content-center">
                     <h3 className="text-white mb-3">{project.title}</h3>
                     <p className="text-white text-center mb-3">{project.description}</p>

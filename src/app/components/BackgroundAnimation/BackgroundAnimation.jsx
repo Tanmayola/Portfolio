@@ -22,7 +22,7 @@ const BackgroundAnimation = () => {
     }, 8000); // Change color every 8 seconds for a more subtle effect
 
     return () => clearInterval(interval);
-  }, []);
+  }, [colors.length]);
 
   return (
     <>
