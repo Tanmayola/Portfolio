@@ -6,6 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import MailIcon from '@mui/icons-material/Mail';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import ArticleIcon from '@mui/icons-material/Article';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -14,6 +15,7 @@ export default function Navigation() {
     { path: '/', icon: <HomeIcon />, label: 'Home' },
     { path: '/about', icon: <PersonIcon />, label: 'About' },
     { path: '/portfolio', icon: <WorkIcon />, label: 'Portfolio' },
+    { path: '/blog', icon: <ArticleIcon />, label: 'Blog' },
     { path: '/contact', icon: <MailIcon />, label: 'Contact' }
   ];
 
