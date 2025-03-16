@@ -136,7 +136,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">AWS</h4>
               </div>
@@ -148,7 +148,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Node.js</h4>
               </div>
@@ -160,7 +160,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Python</h4>
               </div>
@@ -172,7 +172,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Docker</h4>
               </div>
@@ -184,7 +184,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Maven</h4>
               </div>
@@ -196,7 +196,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Terraform</h4>
               </div>
@@ -208,7 +208,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Ansible</h4>
               </div>
@@ -220,7 +220,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Kubernetes</h4>
               </div>
@@ -232,7 +232,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Jenkins</h4>
               </div>
@@ -244,7 +244,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">RHEL</h4>
               </div>
@@ -256,7 +256,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">GIT/GITHUB</h4>
               </div>
@@ -268,7 +268,7 @@ const About = () => {
                   pathColor: `#fa5b0f`,
                   textColor: '#fff',
                   trailColor: '#252525',
-                })} />;
+                })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Next.js</h4>
               </div>

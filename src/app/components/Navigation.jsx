@@ -20,10 +20,10 @@ export default function Navigation() {
   ];
 
   const handleDownload = () => {
-    // Create a link element
     const link = document.createElement('a');
-    link.href = '/TanmayOla_Resume.pdf'; // Make sure this matches your resume file name
+    link.href = '/TanmayOla_Resume.pdf';
     link.download = 'TanmayOla_Resume.pdf';
+    link.type = 'application/pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

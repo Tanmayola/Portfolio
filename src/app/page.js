@@ -1,16 +1,27 @@
 "use client";
 import Image from "next/image";
 import Button from "@mui/material/Button";
-import { ArrowForward } from "@mui/icons-material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
+import BackgroundAnimation from "./components/BackgroundAnimation";
 
 export default function Home() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/TanmayOla_Resume.pdf';
+    link.download = 'TanmayOla_Resume.pdf';
+    link.type = 'application/pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <section className="homePage">
+        <BackgroundAnimation />
         <div className="container-fluid">
           <div className="row align-items-center wrapper flex-column-reverse flex-md-row">
             <div className="col-12 col-md-4">
@@ -75,14 +86,16 @@ export default function Home() {
                       </span>
                     </Button>
                   </Link>
-                  <Link href="/resume.pdf" target="_blank" download style={{ marginLeft: "16px" }}>
-                    <Button className="btn-common iconBtn">
-                      Download Resume{" "}
-                      <span className="icon d-flex align-items-center justify-content-center">
-                        <FileDownloadOutlinedIcon />
-                      </span>
-                    </Button>
-                  </Link>
+                  <Button 
+                    className="btn-common iconBtn"
+                    onClick={handleDownload}
+                    style={{ marginLeft: "16px" }}
+                  >
+                    Download Resume{" "}
+                    <span className="icon d-flex align-items-center justify-content-center">
+                      <FileDownloadOutlinedIcon />
+                    </span>
+                  </Button>
                 </div>
               </div>
             </div>
