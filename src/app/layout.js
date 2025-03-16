@@ -1,7 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css' 
+"use client";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from './components/Nav/Nav';
-import BackgroundAnimation from './components/BackgroundAnimation/BackgroundAnimation';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navigation from "./components/Navigation";
+import BackgroundAnimation from "./components/BackgroundAnimation";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Tanmay Ola - Portfolio",
@@ -11,11 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         <BackgroundAnimation />
-        <Nav/>
+        <Navigation />
         {children}
       </body>
     </html>
-  )
+  );
 }
