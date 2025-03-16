@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Button from "@mui/material/Button";
 import { ArrowForward } from "@mui/icons-material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
@@ -67,7 +68,7 @@ export default function Home() {
                   className="btn-common iconBtn"
                   style={{ marginLeft: "16px" }}
                 >
-                  download Resume{" "}
+                  Download Resume{" "}
                   <span className="icon d-flex align-items-center justify-content-center">
                     <FileDownloadOutlinedIcon />
                   </span>
