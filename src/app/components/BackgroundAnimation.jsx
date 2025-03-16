@@ -1,7 +1,7 @@
 "use client";
 import { useCallback } from "react";
-import { loadSlim } from "tsparticles-slim";
-import Particles from "react-tsparticles";
+import { loadSlim } from "@tsparticles/slim";
+import Particles from "@tsparticles/react";
 
 export default function BackgroundAnimation() {
   const particlesInit = useCallback(async engine => {
