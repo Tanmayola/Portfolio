@@ -5,6 +5,7 @@ import { ArrowForward } from "@mui/icons-material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { TypeAnimation } from "react-type-animation";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -66,21 +67,22 @@ export default function Home() {
                 <br />
 
                 <div className="d-flex align-items-center justify-content-center justify-content-md-start w-100">
-                  <Button className="btn-common iconBtn">
-                    More About Me{" "}
-                    <span className="icon d-flex align-items-center justify-content-center">
-                      <ArrowForwardIosIcon />
-                    </span>
-                  </Button>
-                  <Button
-                    className="btn-common iconBtn"
-                    style={{ marginLeft: "16px" }}
-                  >
-                    Download Resume{" "}
-                    <span className="icon d-flex align-items-center justify-content-center">
-                      <FileDownloadOutlinedIcon />
-                    </span>
-                  </Button>
+                  <Link href="/about">
+                    <Button className="btn-common iconBtn">
+                      More About Me{" "}
+                      <span className="icon d-flex align-items-center justify-content-center">
+                        <ArrowForwardIosIcon />
+                      </span>
+                    </Button>
+                  </Link>
+                  <Link href="/resume.pdf" target="_blank" download style={{ marginLeft: "16px" }}>
+                    <Button className="btn-common iconBtn">
+                      Download Resume{" "}
+                      <span className="icon d-flex align-items-center justify-content-center">
+                        <FileDownloadOutlinedIcon />
+                      </span>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
