@@ -13,6 +13,10 @@ export default function BackgroundAnimation() {
       id="tsparticles"
       init={particlesInit}
       options={{
+        fullScreen: {
+          enable: true,
+          zIndex: -1
+        },
         background: {
           color: {
             value: "#000000",
