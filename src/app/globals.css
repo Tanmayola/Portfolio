@@ -510,3 +510,133 @@ body::before {
 .contact-form button.btn-common:hover svg {
   transform: translateX(3px);
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0px 20px;
+  }
+
+  .homePage {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .homePage::before {
+    width: 100%;
+    height: 100%;
+    transform: rotate(0);
+    opacity: 0.1;
+    left: 0;
+  }
+
+  .homePage .wrapper {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .homePage .wrapper .col-md-8 {
+    padding: 40px 20px;
+  }
+
+  .homePage .wrapper h1 {
+    font-size: 32px;
+  }
+
+  .homePage .imagwrap {
+    margin: 20px auto;
+    max-width: 300px;
+  }
+
+  .hd {
+    font-size: 36px;
+  }
+
+  .hd .title-bg {
+    font-size: 60px;
+    top: -20px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutPage {
+    padding: 40px 20px;
+  }
+
+  .aboutwrapper .part2 .boxes .box {
+    width: 100%;
+  }
+
+  .portfolioPage {
+    padding: 40px 20px;
+  }
+
+  .portfolioPage .wrapper .box {
+    height: 250px;
+  }
+
+  .portfolioPage .wrapper .box .overlay h3 {
+    font-size: 20px;
+  }
+
+  .portfolioPage .wrapper .box .overlay p {
+    font-size: 12px;
+  }
+
+  .contactPage {
+    padding: 40px 0;
+  }
+
+  .contact-info {
+    margin-bottom: 40px;
+  }
+
+  /* Button adjustments for mobile */
+  .d-flex.align-items-center {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn-common.iconBtn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  /* Navigation adjustments */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li .btn-common {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Additional tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .homePage .wrapper h1 {
+    font-size: 40px;
+  }
+
+  .hd {
+    font-size: 48px;
+  }
+
+  .hd .title-bg {
+    font-size: 80px;
+  }
+
+  .aboutwrapper .part2 .boxes .box {
+    width: calc(50% - 10px);
+  }
+}
