@@ -1,0 +1,39 @@
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+  background-size: 400% 400%;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+}
+
+/* Add subtle animation for the overlay */
+@keyframes pulseOverlay {
+  0% {
+    background: rgba(0, 0, 0, 0.75);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.75);
+  }
+}
+
+.background-overlay {
+  animation: pulseOverlay 8s ease-in-out infinite;
+} 
