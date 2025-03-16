@@ -15,7 +15,7 @@ export default function BackgroundAnimation() {
       options={{
         background: {
           color: {
-            value: "#111",
+            value: "#000000",
           },
         },
         fpsLimit: 120,
