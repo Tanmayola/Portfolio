@@ -5,16 +5,88 @@ import Button from "@mui/material/Button";
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import Image from "next/image";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 const About = () => {
   const percentage = 90;
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/TanmayOla_Resume.pdf';
+    link.download = 'TanmayOla_Resume.pdf';
+    link.type = 'application/pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="aboutPage">
       <div className="container-fluid">
-        <div className="di-flex">
-          <h1 className="hd text-center m-auto">
-            ABOUT <span>ME</span>
-            <span className="title-bg">RESUME</span>
-          </h1>
+        <div className="row">
+          <div className="col-12">
+            <div className="hd text-center">
+              <h2>About Me</h2>
+              <span className="title-bg">ABOUT</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="row align-items-center">
+          <div className="col-12 col-md-4">
+            <div className="about-image text-center">
+              <Image
+                src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711768911103?e=1743033600&v=beta&t=Xn4ne271SLX2wYV8sdsuvMK8_GvW_ttPuueW-zczk98"
+                alt="Tanmay Ola"
+                width={300}
+                height={300}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
+          </div>
+          <div className="col-12 col-md-8">
+            <div className="about-content">
+              <h3>Full Stack Developer & DevOps Engineer</h3>
+              <p>
+                I am a passionate Full Stack Developer and DevOps Engineer with a
+                strong foundation in software development and cloud technologies. My
+                expertise includes:
+              </p>
+              <ul>
+                <li>MERN Stack Development</li>
+                <li>AWS Cloud Services</li>
+                <li>DevOps Practices</li>
+                <li>CI/CD Pipeline Automation</li>
+                <li>Container Orchestration</li>
+                <li>Infrastructure as Code</li>
+              </ul>
+              <div className="about-buttons">
+                <Button 
+                  className="btn-common iconBtn"
+                  onClick={handleDownload}
+                >
+                  Download Resume{" "}
+                  <span className="icon d-flex align-items-center justify-content-center">
+                    <FileDownloadOutlinedIcon />
+                  </span>
+                </Button>
+                <Link href="/contact">
+                  <Button className="btn-common iconBtn">
+                    Contact Me{" "}
+                    <span className="icon d-flex align-items-center justify-content-center">
+                      <ArrowForwardIosIcon />
+                    </span>
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="row mt-5 aboutwrapper">
@@ -67,12 +139,6 @@ const About = () => {
               </div>
             </div>
             <br />
-            <Button className="btn-common iconBtn">
-              download Resume{" "}
-              <span className="icon d-flex align-items-center justify-content-center">
-                <FileDownloadOutlinedIcon />
-              </span>
-            </Button>
           </div>
 
           <div className="col part2">

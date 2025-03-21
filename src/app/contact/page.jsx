@@ -6,6 +6,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SendIcon from '@mui/icons-material/Send';
+import Button from "@mui/material/Button";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +15,11 @@ const Contact = () => {
     email: '',
     subject: '',
     message: ''
+  });
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
   });
 
   const handleChange = (e) => {
@@ -22,10 +29,29 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log(formData);
+    setStatus({ loading: true, success: false, error: false });
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus({ loading: false, success: true, error: false });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      setStatus({ loading: false, success: false, error: true });
+      console.error('Error sending email:', error);
+    }
   };
 
   return (
@@ -73,56 +99,74 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-md-8">
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="row">
-                <div className="col-md-6 mb-4">
+            <div className="contact-form">
+              <form onSubmit={handleSubmit}>
+                <div className="row">
+                  <div className="col-12 col-md-6">
+                    <div className="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="col-12 col-md-6">
+                    <div className="form-group">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="form-group">
                   <input
                     type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
                     onChange={handleChange}
                     required
                   />
                 </div>
-                <div className="col-md-6 mb-4">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
+                <div className="form-group">
+                  <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
                     onChange={handleChange}
                     required
-                  />
+                  ></textarea>
                 </div>
-              </div>
-              <div className="mb-4">
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                ></textarea>
-              </div>
-              <button type="submit" className="btn-common iconBtn">
-                <span className="text">Send Message</span>
-                <span className="icon d-flex align-items-center justify-content-center">
-                  <SendIcon />
-                </span>
-              </button>
-            </form>
+                <div className="form-group text-center">
+                  <Button
+                    type="submit"
+                    className="btn-common"
+                    disabled={status.loading}
+                  >
+                    {status.loading ? "Sending..." : "Send Message"}
+                  </Button>
+                </div>
+                {status.success && (
+                  <div className="alert alert-success mt-3">
+                    Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+                {status.error && (
+                  <div className="alert alert-danger mt-3">
+                    Failed to send message. Please try again later.
+                  </div>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </div>
