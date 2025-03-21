@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -20,7 +20,13 @@ const Contact = () => {
     loading: false,
     success: false,
     error: false,
+    errorMessage: ''
   });
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -31,10 +37,16 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ loading: true, success: false, error: false });
+    setStatus({ loading: true, success: false, error: false, errorMessage: '' });
 
     try {
-      await emailjs.send(
+      if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
+          !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 
+          !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+        throw new Error('EmailJS configuration is missing');
+      }
+
+      const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
@@ -42,15 +54,23 @@ const Contact = () => {
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        }
       );
 
-      setStatus({ loading: false, success: true, error: false });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      if (result.status === 200) {
+        setStatus({ loading: false, success: true, error: false, errorMessage: '' });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error('Failed to send email');
+      }
     } catch (error) {
-      setStatus({ loading: false, success: false, error: true });
       console.error('Error sending email:', error);
+      setStatus({ 
+        loading: false, 
+        success: false, 
+        error: true,
+        errorMessage: error.message || 'Failed to send message. Please try again later.'
+      });
     }
   };
 
@@ -162,7 +182,7 @@ const Contact = () => {
                 )}
                 {status.error && (
                   <div className="alert alert-danger mt-3">
-                    Failed to send message. Please try again later.
+                    {status.errorMessage}
                   </div>
                 )}
               </form>
