@@ -333,7 +333,7 @@ const About = () => {
                   </span>
                 </div>
                 <div className="right pl-4">
-                  <div className="badge badge-default">october 2023-May 2024</div>
+                  <div className="badge badge-default">May 2024-August 2024</div>
                   <h4 className="mt-3 mb-3">DevOps Intern - <span>HungryPixel Technologies</span></h4>
                   <p className="text-white">As a DevOps Intern, I worked on AWS Automation, including S3 website hosting, Amplify app deployment, Certificate Manager, Route 53, and CloudFront management using AWS SDK in Node.js. This experience enhanced my AWS and DevOps skills.</p>
                 </div>
