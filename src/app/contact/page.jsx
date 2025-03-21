@@ -157,7 +157,7 @@ const Contact = () => {
                 </div>
                 {status.success && (
                   <div className="alert alert-success mt-3">
-                    Message sent successfully! I'll get back to you soon.
+                    Message sent successfully! I&apos;ll get back to you soon.
                   </div>
                 )}
                 {status.error && (
