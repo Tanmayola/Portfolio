@@ -25,7 +25,17 @@ const Contact = () => {
 
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (!publicKey) {
+      console.error('EmailJS public key is missing');
+      setStatus(prev => ({
+        ...prev,
+        error: true,
+        errorMessage: 'Email service is not properly configured. Please try again later.'
+      }));
+      return;
+    }
+    emailjs.init(publicKey);
   }, []);
 
   const handleChange = (e) => {
@@ -40,15 +50,18 @@ const Contact = () => {
     setStatus({ loading: true, success: false, error: false, errorMessage: '' });
 
     try {
-      if (!process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 
-          !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 
-          !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
-        throw new Error('EmailJS configuration is missing');
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('Missing EmailJS configuration:', { serviceId, templateId, publicKey });
+        throw new Error('Email service is not properly configured. Please try again later.');
       }
 
       const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,
