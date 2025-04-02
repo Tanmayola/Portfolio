@@ -24,7 +24,6 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    // Initialize EmailJS with your public key
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
     if (!publicKey) {
       console.error('EmailJS public key is missing');

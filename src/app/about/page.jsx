@@ -4,14 +4,13 @@ import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
-
 const About = () => {
   const percentage = 90;
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Resume.pdf';
-    link.download = 'Resume.pdf';
+    link.href = '/TanmayOla_Resume.pdf';
+    link.download = 'TanmayOla_Resume.pdf';
     link.type = 'application/pdf';
     document.body.appendChild(link);
     link.click();
@@ -23,7 +22,7 @@ const About = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
-            <div className="hd text-center">
+            <div className="hd text-center m-auto">
               <h2>About Me</h2>
               <span className="title-bg">ABOUT</span>
             </div>
@@ -36,16 +35,16 @@ const About = () => {
             <div className="row">
               <div className="col">
                 <h4>
-                  First Name : <span>Your Name</span>
+                  First Name : <span>Tanmay</span>
                 </h4>
                 <h4>
-                  Last Name : <span>Your Last Name</span>
+                  Last Name : <span>Ola</span>
                 </h4>
                 <h4>
-                  Age : <span>Your Age</span>
+                  Age : <span>20 Years</span>
                 </h4>
                 <h4>
-                  Nationality : <span>Your Nationality</span>
+                  Nationality : <span>India</span>
                 </h4>
                 <h4>
                   Freelance : <span>Available</span>
@@ -54,28 +53,36 @@ const About = () => {
 
               <div className="col">
                 <h4>
-                  Address : <span>Your Address</span>
+                  Address : <span>Jaipur</span>
                 </h4>
                 <h4>
-                  Phone : <span>Your Phone</span>
+                  Phone : <span>+91 8114436414</span>
                 </h4>
                 <h4>
-                  Email : <span>your.email@example.com</span>
+                  Email : <span>tanmayola04@gmail.com</span>
                 </h4>
                 <h4>
                   LinkedIn :{" "}
                   <span>
                     <Link
-                      href="your-linkedin-url"
+                      href="https://www.linkedin.com/in/tanmay-ola-38a108264/"
                       target="_blank"
+                      className="text-primary hover:text-accent transition-colors"
                     >
                       LinkedIn
                     </Link>{" "}
-                    , <Link href="your-github-url">GitHub</Link>
+                    ,{" "}
+                    <Link 
+                      href="https://github.com/Tanmayola"
+                      target="_blank"
+                      className="text-primary hover:text-accent transition-colors"
+                    >
+                      GitHub
+                    </Link>
                   </span>
                 </h4>
                 <h4>
-                  Languages : <span>Your Languages</span>
+                  Languages : <span>English, Hindi</span>
                 </h4>
               </div>
             </div>
@@ -140,9 +147,9 @@ const About = () => {
               <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">AWS</h4>
@@ -152,9 +159,9 @@ const About = () => {
               <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Node.js</h4>
@@ -164,9 +171,9 @@ const About = () => {
               <CircularProgressbar value={50} text={`${50}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Python</h4>
@@ -176,9 +183,9 @@ const About = () => {
               <CircularProgressbar value={60} text={`${60}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Docker</h4>
@@ -188,9 +195,9 @@ const About = () => {
               <CircularProgressbar value={60} text={`${60}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Maven</h4>
@@ -200,9 +207,9 @@ const About = () => {
               <CircularProgressbar value={60} text={`${60}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Terraform</h4>
@@ -212,9 +219,9 @@ const About = () => {
               <CircularProgressbar value={70} text={`${70}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Ansible</h4>
@@ -224,9 +231,9 @@ const About = () => {
               <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Kubernetes</h4>
@@ -236,9 +243,9 @@ const About = () => {
               <CircularProgressbar value={50} text={`${50}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
                 <h4 className="text-white text-center m-auto">Jenkins</h4>
@@ -248,36 +255,12 @@ const About = () => {
               <CircularProgressbar value={80} text={`${80}%`}
                 className="counterSpiner"
                 styles={buildStyles({
-                  pathColor: `#fa5b0f`,
+                  pathColor: `var(--primary-color)`,
                   textColor: '#fff',
-                  trailColor: '#252525',
+                  trailColor: 'var(--background-light)',
                 })} />
                 <br/>
-                <h4 className="text-white text-center m-auto">RHEL</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={95} text={`${95}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `#fa5b0f`,
-                  textColor: '#fff',
-                  trailColor: '#252525',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">GIT/GITHUB</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={50} text={`${50}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `#fa5b0f`,
-                  textColor: '#fff',
-                  trailColor: '#252525',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Next.js</h4>
+                <h4 className="text-white text-center m-auto">Git</h4>
               </div>
             </div>
         </div>

@@ -46,7 +46,7 @@ export default function Home() {
                 <div className="d-flex align-items-center mb-3">
                   <span className="line mr-4"></span>
                   <h1 className="text-white font-weight-bold mt-0">
-                    <span className="text-common">I&apos;M Tanmay Ola. </span>
+                    <span className="text-common">I&apos;M Tanmay Ola </span>
                     <br className="d-block d-md-none" />
                     <TypeAnimation
                       sequence={[
