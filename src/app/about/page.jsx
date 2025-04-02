@@ -1,20 +1,17 @@
 "use client"
 import Link from "next/link";
-import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
-import Button from "@mui/material/Button";
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import Image from "next/image";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 
 const About = () => {
   const percentage = 90;
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/TanmayOla_Resume.pdf';
-    link.download = 'TanmayOla_Resume.pdf';
+    link.href = '/Resume.pdf';
+    link.download = 'Resume.pdf';
     link.type = 'application/pdf';
     document.body.appendChild(link);
     link.click();
@@ -33,108 +30,52 @@ const About = () => {
           </div>
         </div>
 
-        <div className="row align-items-center">
-          <div className="col-12 col-md-4">
-            <div className="about-image text-center">
-              <Image
-                src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711768911103?e=1743033600&v=beta&t=Xn4ne271SLX2wYV8sdsuvMK8_GvW_ttPuueW-zczk98"
-                alt="Tanmay Ola"
-                width={300}
-                height={300}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
-          </div>
-          <div className="col-12 col-md-8">
-            <div className="about-content">
-              <h3>Full Stack Developer & DevOps Engineer</h3>
-              <p>
-                I am a passionate Full Stack Developer and DevOps Engineer with a
-                strong foundation in software development and cloud technologies. My
-                expertise includes:
-              </p>
-              <ul>
-                <li>MERN Stack Development</li>
-                <li>AWS Cloud Services</li>
-                <li>DevOps Practices</li>
-                <li>CI/CD Pipeline Automation</li>
-                <li>Container Orchestration</li>
-                <li>Infrastructure as Code</li>
-              </ul>
-              <div className="about-buttons">
-                <Button 
-                  className="btn-common iconBtn"
-                  onClick={handleDownload}
-                >
-                  Download Resume{" "}
-                  <span className="icon d-flex align-items-center justify-content-center">
-                    <FileDownloadOutlinedIcon />
-                  </span>
-                </Button>
-                <Link href="/contact">
-                  <Button className="btn-common iconBtn">
-                    Contact Me{" "}
-                    <span className="icon d-flex align-items-center justify-content-center">
-                      <ArrowForwardIosIcon />
-                    </span>
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="row mt-5 aboutwrapper">
           <div className="col-md-6 part1">
-            <h2 className="text-white">PERSSONAL INFOS</h2>
+            <h2 className="text-white">PERSONAL INFO</h2>
             <div className="row">
               <div className="col">
                 <h4>
-                  First Name : <span>Tanmay</span>
+                  First Name : <span>Your Name</span>
                 </h4>
                 <h4>
-                  Last Name : <span>Ola</span>
+                  Last Name : <span>Your Last Name</span>
                 </h4>
                 <h4>
-                  Age : <span>20 Years</span>
+                  Age : <span>Your Age</span>
                 </h4>
                 <h4>
-                  Nationality : <span>India</span>
+                  Nationality : <span>Your Nationality</span>
                 </h4>
                 <h4>
-                  Frelance : <span>Available</span>
+                  Freelance : <span>Available</span>
                 </h4>
               </div>
 
               <div className="col">
                 <h4>
-                  Address : <span>Jaipur</span>
+                  Address : <span>Your Address</span>
                 </h4>
                 <h4>
-                  Phone : <span>+91 8114436414</span>
+                  Phone : <span>Your Phone</span>
                 </h4>
                 <h4>
-                  Email : <span>tanmayola04@gmail.com</span>
+                  Email : <span>your.email@example.com</span>
                 </h4>
                 <h4>
-                  Linkdin :{" "}
+                  LinkedIn :{" "}
                   <span>
                     <Link
-                      href="https://www.linkedin.com/in/tanmay-ola-38a108264/"
+                      href="your-linkedin-url"
                       target="_blank"
                     >
-                      Linkdin
+                      LinkedIn
                     </Link>{" "}
-                    , <Link href={"https://github.com/Tanmayola"}>GITHUB</Link>
+                    , <Link href="your-github-url">GitHub</Link>
                   </span>
                 </h4>
                 <h4>
-                  Languages : <span>English , Hindi</span>
+                  Languages : <span>Your Languages</span>
                 </h4>
               </div>
             </div>
@@ -196,7 +137,7 @@ const About = () => {
 
             <div className="row">
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={90} text={`${90}%`}
+              <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -208,7 +149,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={60} text={`${60}%`}
+              <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -220,7 +161,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={80} text={`${80}%`}
+              <CircularProgressbar value={50} text={`${50}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -232,7 +173,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={90} text={`${90}%`}
+              <CircularProgressbar value={60} text={`${60}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -244,7 +185,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={90} text={`${90}%`}
+              <CircularProgressbar value={60} text={`${60}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -280,7 +221,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={60} text={`${60}%`}
+              <CircularProgressbar value={40} text={`${40}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
@@ -292,7 +233,7 @@ const About = () => {
               </div>
 
               <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={80} text={`${80}%`}
+              <CircularProgressbar value={50} text={`${50}%`}
                 className="counterSpiner"
                 styles={buildStyles({
                   pathColor: `#fa5b0f`,
