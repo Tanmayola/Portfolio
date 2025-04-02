@@ -15,7 +15,7 @@ const Portfolio = () => {
     },
     {
       title: "AWS Cloud Infrastructure",
-      image: "https://cdn.pixabay.com/photo/2018/08/17/18/36/cloud-computing-3613397_1280.png",
+      image: "https://cdn.pixabay.com/photo/2024/01/26/08/07/ai-generated-8533603_1280.jpg",
       description: "Automated AWS infrastructure using Terraform and Ansible",
       github: "https://github.com/yourusername/aws-infrastructure",
       live: null
