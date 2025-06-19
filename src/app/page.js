@@ -27,7 +27,7 @@ export default function Home() {
             <div className="col-12 col-md-4">
               <div className="imagwrap text-center">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711768911103?e=1749081600&v=beta&t=I8nU7zQyKzk-8gt2qQC62_WPrzyg7sdfHCQ33E0AK7o"
+                  src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711768911103?e=1755734400&v=beta&t=ownVsK2FFLQ71MBkxQ9jICj6twEC35VwCynkEZzAEu0"
                   alt="Tanmay Ola"
                   width={300}
                   height={300}
