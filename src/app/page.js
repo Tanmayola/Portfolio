@@ -27,16 +27,11 @@ export default function Home() {
             <div className="col-12 col-md-4">
               <div className="imagwrap text-center">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D5603AQHs-zwvRuza9w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711768911103?e=1755734400&v=beta&t=ownVsK2FFLQ71MBkxQ9jICj6twEC35VwCynkEZzAEu0"
+                  src="https://media.licdn.com/dms/image/v2/D5603AQE21y9N1ilHWQ/profile-displayphoto-scale_400_400/B56ZmK4NpGG0Ag-/0/1758971618086?e=1768435200&v=beta&t=kjefK3zMPsxL_ZNO73EoEmQEXFw9i5BGBMYUKx6lUpU"
                   alt="Tanmay Ola"
-                  width={300}
-                  height={300}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    borderRadius: "50%",
-                    objectFit: "cover"
-                  }}
+                  width={400}
+                  height={400}
+                  className="profile-image"
                   priority
                 />
               </div>

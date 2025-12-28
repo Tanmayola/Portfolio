@@ -158,12 +158,31 @@ body::before {
     background: #000;
     border-radius: 30px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.homePage .imagwrap img{
-  width: 110% !important;
+.homePage .imagwrap img,
+.homePage .imagwrap .profile-image {
+  width: 100% !important;
   height: auto !important;
+  border-radius: 30px;
+  object-fit: cover;
+  display: block;
+}
 
+.homePage .imagwrap > span {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.homePage .imagwrap > span > img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 30px;
+  object-fit: cover;
 }
 .homePage .wrapper .col-md-8{
   padding: 40px 100px;
