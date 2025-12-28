@@ -7,6 +7,23 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 const About = () => {
   const percentage = 90;
 
+  // Calculate age from birth date (December 14, 2004)
+  const calculateAge = (birthDate) => {
+    const today = new Date();
+    const birth = new Date(birthDate);
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    
+    // If birthday hasn't occurred this year yet, subtract 1 from age
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    
+    return age;
+  };
+
+  const age = calculateAge('2004-12-14');
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/TanmayOla_Resume.pdf';
@@ -41,7 +58,7 @@ const About = () => {
                   Last Name : <span>Ola</span>
                 </h4>
                 <h4>
-                  Age : <span>20 Years</span>
+                  Age : <span>{age} Years</span>
                 </h4>
                 <h4>
                   Nationality : <span>India</span>
