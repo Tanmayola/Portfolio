@@ -25,16 +25,11 @@ const Contact = () => {
 
   useEffect(() => {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-    if (!publicKey) {
-      console.error('EmailJS public key is missing');
-      setStatus(prev => ({
-        ...prev,
-        error: true,
-        errorMessage: 'Email service is not properly configured. Please try again later.'
-      }));
-      return;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    } else {
+      console.warn('EmailJS public key is not configured');
     }
-    emailjs.init(publicKey);
   }, []);
 
   const handleChange = (e) => {
@@ -110,14 +105,14 @@ const Contact = () => {
                 <PhoneIcon className="icon" />
                 <div className="details">
                   <h3>Phone</h3>
-                  <p>+91 8114436414</p>
+                  <p>+91 81144 36414</p>
                 </div>
               </div>
               <div className="info-box">
                 <LocationOnIcon className="icon" />
                 <div className="details">
                   <h3>Location</h3>
-                  <p>Jaipur, India</p>
+                  <p>Jaipur, Rajasthan, India</p>
                 </div>
               </div>
               <div className="social-links">

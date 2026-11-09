@@ -27,7 +27,7 @@ export default function Home() {
             <div className="col-12 col-md-4">
               <div className="imagwrap text-center">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D5603AQFLCmxVdw_ZXQ/profile-displayphoto-scale_200_200/B56ZykwUwzHQAY-/0/1772290659560?e=1775692800&v=beta&t=pgrvq3W4x5LbGnaXICTuLVw3tPrktcNxgMuigdhM9fc"
+                  src="https://assets.tanmayola.com/imgs/tanmayimage-crop.jpg"
                   alt="Tanmay Ola"
                   width={400}
                   height={400}
@@ -45,14 +45,14 @@ export default function Home() {
                     <br className="d-block d-md-none" />
                     <TypeAnimation
                       sequence={[
-                        "DevOps Engineer",
-                        1000,
-                        "SRE",
-                        1000,
-                        "MERN Stack Developer",
-                        1000,
-                        "AWS Cloud Engineer",
-                        1000
+                        "Information Security & VAPT",
+                        1200,
+                        "DevOps & Cloud Engineer",
+                        1200,
+                        "AWS Cloud Specialist",
+                        1200,
+                        "OT Security & ISMS Consultant",
+                        1200
                       ]}
                       wrapper="span"
                       speed={50}
@@ -63,11 +63,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-white">
-                  I&apos;m a passionate and driven individual with a strong foundation
-                  in software development and a keen interest in DevOps. I have a
-                  solid understanding of various programming languages and tools,
-                  and I&apos;m always eager to learn and stay up-to-date with the
-                  latest technologies.
+                  Information Security and VAPT professional with hands-on experience delivering 50+ OT VAPT and ISMS reports for power-sector leaders including AP Transco, KSEB, and SJVN. Strong DevOps &amp; AWS foundation spanning Linux, Docker, Kubernetes, Jenkins, Terraform, Ansible, and automated CI/CD pipelines.
                 </p>
 
                 <br />

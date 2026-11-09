@@ -1,12 +1,19 @@
-"use client"
+"use client";
 import Link from "next/link";
 import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import SecurityIcon from '@mui/icons-material/Security';
+import CloudIcon from '@mui/icons-material/Cloud';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import DescriptionIcon from '@mui/icons-material/Article';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import Button from '@mui/material/Button';
 
 const About = () => {
-  const percentage = 90;
-
   // Calculate age from birth date (December 14, 2004)
   const calculateAge = (birthDate) => {
     const today = new Date();
@@ -14,7 +21,6 @@ const About = () => {
     let age = today.getFullYear() - birth.getFullYear();
     const monthDiff = today.getMonth() - birth.getMonth();
     
-    // If birthday hasn't occurred this year yet, subtract 1 from age
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
       age--;
     }
@@ -34,9 +40,180 @@ const About = () => {
     document.body.removeChild(link);
   };
 
+  const skillMeters = [
+    { name: "VAPT & Security", value: 85 },
+    { name: "AWS & Cloud", value: 80 },
+    { name: "DevOps & CI/CD", value: 85 },
+    { name: "Linux Systems", value: 80 },
+    { name: "Docker & K8s", value: 75 },
+    { name: "Terraform & Ansible", value: 70 },
+    { name: "Python & Node.js", value: 75 },
+    { name: "Git & GitHub", value: 85 },
+  ];
+
+  const skillCategories = [
+    {
+      title: "Vulnerability Assessment & Web Security",
+      icon: <SecurityIcon />,
+      skills: [
+        "Nessus",
+        "Nmap",
+        "Burp Suite",
+        "OT VAPT Reporting",
+        "ISMS Reporting",
+        "Vulnerability Identification",
+        "Security Testing",
+        "Findings Documentation",
+        "Risk Ratings",
+        "Remediation Recommendations"
+      ]
+    },
+    {
+      title: "Cloud & AWS",
+      icon: <CloudIcon />,
+      skills: [
+        "AWS",
+        "Amazon S3",
+        "AWS Amplify",
+        "Certificate Manager (ACM)",
+        "Amazon Route 53",
+        "Amazon CloudFront",
+        "AWS SDK for JavaScript"
+      ]
+    },
+    {
+      title: "DevOps & Automation",
+      icon: <TerminalIcon />,
+      skills: [
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Terraform",
+        "Ansible",
+        "Git",
+        "GitHub",
+        "CI/CD Pipelines"
+      ]
+    },
+    {
+      title: "Systems & Development",
+      icon: <TerminalIcon />,
+      skills: [
+        "Linux",
+        "Node.js",
+        "Python",
+        "JavaScript",
+        "Bash Scripting"
+      ]
+    },
+    {
+      title: "Audit & Documentation",
+      icon: <DescriptionIcon />,
+      skills: [
+        "OT VAPT Reporting",
+        "ISMS Reporting",
+        "Technical Report Writing",
+        "Microsoft Word",
+        "Microsoft Excel"
+      ]
+    }
+  ];
+
+  const experiences = [
+    {
+      period: "24 Aug 2026 – Working",
+      role: "VAPT Consultant",
+      company: "ANB Global",
+      points: [
+        "Prepared 30+ OT VAPT reports for AP Transco, documenting vulnerability assessment findings and remediation recommendations.",
+        "Prepared 20+ OT VAPT reports for KSEB, recording identified vulnerabilities, risk ratings, and recommended corrective actions.",
+        "Prepared an ISMS report for the SJVN power plant, Bikaner.",
+        "Supported security assessment documentation by translating technical findings into structured reports for client review."
+      ]
+    },
+    {
+      period: "Sep 2024 – Mar 2025",
+      role: "DevOps Intern",
+      company: "Zeetron Networks Pvt. Ltd.",
+      points: [
+        "Worked with DevOps tools and practices involving Linux, Docker, Kubernetes, Jenkins, Terraform, Ansible, Git, and GitHub.",
+        "Gained practical exposure to CI/CD pipeline implementation and automated deployment workflows."
+      ]
+    },
+    {
+      period: "May 2024 – Aug 2024",
+      role: "DevOps Intern",
+      company: "Hungrypixel Technologies (OPC) Pvt. Ltd.",
+      points: [
+        "Worked on AWS automation for website hosting and application deployment.",
+        "Used Amazon S3 for website hosting and AWS Amplify for application deployment.",
+        "Worked with AWS Certificate Manager, Route 53, and CloudFront distribution management using the AWS SDK for JavaScript."
+      ]
+    },
+    {
+      period: "Oct 2023 – May 2024",
+      role: "DevOps Trainee",
+      company: "Zeetron Networks Pvt. Ltd.",
+      points: [
+        "Built foundational knowledge of DevOps workflows, Linux, cloud technologies, and automation tools."
+      ]
+    }
+  ];
+
+  const educations = [
+    {
+      period: "Pursuing | Expected 2027",
+      degree: "M.Sc. (Information Technology)",
+      institution: "University of Rajasthan, Jaipur",
+      description: "Advanced postgraduate studies covering cyber security, enterprise cloud architecture, networking protocols, and systems development."
+    },
+    {
+      period: "2022 – 2025 | Score: 69%",
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "University Commerce College, University of Rajasthan, Jaipur",
+      description: "Focused on Computer Applications, programming languages, database systems, networking, and software engineering methodologies."
+    },
+    {
+      period: "2022 | Score: 72%",
+      degree: "Senior Secondary (12th), PCM",
+      institution: "RBSE Board",
+      description: "Physics, Chemistry, and Mathematics background providing strong analytical foundations."
+    }
+  ];
+
+  const certifications = [
+    { title: "AWS Certified Solutions Architect – Associate", issuer: "Amazon Web Services" },
+    { title: "Certified SOC Analyst (CSA)", issuer: "EC-Council" },
+    { title: "Cloud Computing", issuer: "NPTEL" },
+    { title: "Computer Networks & Internet Protocol", issuer: "NPTEL" },
+    { title: "Python for Data Science", issuer: "NPTEL" },
+    { title: "Data Science for Engineers", issuer: "NPTEL" },
+    { title: "Problem Solving Through Programming in C", issuer: "NPTEL" },
+    { title: "Programming in Java", issuer: "NPTEL" },
+    { title: "DevOps Training Certificate", issuer: "IIHT" },
+    { title: "Python for Data Analytics Training Certificate", issuer: "IIHT" },
+    { title: "MERN Stack Summer Internship", issuer: "SKIT" },
+    { title: "IoT and Robotics for Managers", issuer: "SKIT" },
+    { title: "JEE (IBM Platform)", issuer: "SKIT" },
+  ];
+
+  const activities = [
+    {
+      title: "NCC: CATC-VI-2023",
+      unit: "7 RAJ (I) COY NCC, Jaipur",
+      description: "Completed annual training camp with intensive discipline, leadership, and operational readiness drills."
+    },
+    {
+      title: "NCC March Past",
+      unit: "University of Rajasthan, Jaipur",
+      description: "Participated with distinction in the university NCC March Past parade contingent."
+    }
+  ];
+
   return (
     <section className="aboutPage">
       <div className="container-fluid">
+        {/* Title */}
         <div className="row">
           <div className="col-12">
             <div className="hd text-center m-auto">
@@ -46,40 +223,25 @@ const About = () => {
           </div>
         </div>
 
+        {/* Personal Info & Stats */}
         <div className="row mt-5 aboutwrapper">
-          <div className="col-md-6 part1">
+          <div className="col-lg-6 col-12 part1 mb-4 mb-lg-0">
             <h2 className="text-white">PERSONAL INFO</h2>
             <div className="row">
-              <div className="col">
-                <h4>
-                  First Name : <span>Tanmay</span>
-                </h4>
-                <h4>
-                  Last Name : <span>Ola</span>
-                </h4>
-                <h4>
-                  Age : <span>{age} Years</span>
-                </h4>
-                <h4>
-                  Nationality : <span>India</span>
-                </h4>
-                <h4>
-                  Freelance : <span>Available</span>
-                </h4>
+              <div className="col-sm-6 col-12">
+                <h4>First Name : <span>Tanmay</span></h4>
+                <h4>Last Name : <span>Ola</span></h4>
+                <h4>Age : <span>{age} Years</span></h4>
+                <h4>Nationality : <span>India</span></h4>
+                <h4>Freelance : <span>Available</span></h4>
               </div>
 
-              <div className="col">
+              <div className="col-sm-6 col-12">
+                <h4>Address : <span>Jaipur, Rajasthan</span></h4>
+                <h4>Phone : <span>+91 81144 36414</span></h4>
+                <h4>Email : <span>tanmayola04@gmail.com</span></h4>
                 <h4>
-                  Address : <span>Jaipur</span>
-                </h4>
-                <h4>
-                  Phone : <span>+91 8114436414</span>
-                </h4>
-                <h4>
-                  Email : <span>tanmayola04@gmail.com</span>
-                </h4>
-                <h4>
-                  LinkedIn :{" "}
+                  Profiles :{" "}
                   <span>
                     <Link
                       href="https://www.linkedin.com/in/tanmay-ola-38a108264/"
@@ -88,7 +250,7 @@ const About = () => {
                     >
                       LinkedIn
                     </Link>{" "}
-                    ,{" "}
+                    |{" "}
                     <Link 
                       href="https://github.com/Tanmayola"
                       target="_blank"
@@ -98,254 +260,241 @@ const About = () => {
                     </Link>
                   </span>
                 </h4>
-                <h4>
-                  Languages : <span>English, Hindi</span>
-                </h4>
+                <h4>Languages : <span>English, Hindi</span></h4>
               </div>
             </div>
-            <br />
+
+            <div className="mt-4">
+              <Button 
+                className="btn-common iconBtn"
+                onClick={handleDownload}
+              >
+                Download Resume{" "}
+                <span className="icon d-flex align-items-center justify-content-center">
+                  <FileDownloadOutlinedIcon />
+                </span>
+              </Button>
+            </div>
           </div>
 
-          <div className="col part2">
+          <div className="col-lg-6 col-12 part2">
             <div className="boxes">
               <div className="box">
                 <span className="count d-flex">
-                  8<span className="ml-2">+</span>
+                  50<span className="ml-2">+</span>
                 </span>
-                <div className="d-flex mt-2">
+                <div className="d-flex mt-2 justify-content-center">
                   <span className="line"></span>
-                  <h4>MONTHS OF <br/>EXPERIENCE</h4>
+                  <h4>OT VAPT <br/>REPORTS</h4>
+                </div>
+              </div>
+              <div className="box">
+                <span className="count d-flex">
+                  4<span className="ml-2">+</span>
+                </span>
+                <div className="d-flex mt-2 justify-content-center">
+                  <span className="line"></span>
+                  <h4>INDUSTRY <br/>ROLES</h4>
+                </div>
+              </div>
+              <div className="box">
+                <span className="count d-flex">
+                  13<span className="ml-2">+</span>
+                </span>
+                <div className="d-flex mt-2 justify-content-center">
+                  <span className="line"></span>
+                  <h4>COMPLETED <br/>CERTIFICATIONS</h4>
                 </div>
               </div>
               <div className="box">
                 <span className="count d-flex">
                   7<span className="ml-2">+</span>
                 </span>
-                <div className="d-flex mt-2">
+                <div className="d-flex mt-2 justify-content-center">
                   <span className="line"></span>
                   <h4>COMPLETED <br/>PROJECTS</h4>
-                </div>
-              </div>
-              <div className="box">
-                <span className="count d-flex">
-                  5<span className="ml-2">+</span>
-                </span>
-                <div className="d-flex mt-2">
-                  <span className="line"></span>
-                  <h4>INTERNSHIPS</h4>
-                </div>
-              </div>
-              <div className="box">
-                <span className="count d-flex">
-                  10<span className="ml-2">+</span>
-                </span>
-                <div className="d-flex mt-2">
-                  <span className="line"></span>
-                  <h4>CERTIFICATION <br/>COMPLETED</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <br/>
-        <br/>
-
-        <div className="d-flex">
-          <span className="divider"></span>
-        </div>
-
-        {/**skill section start-here */}
-        <div className="skillSection mt-5">
-            <h2 className="text-center text-white">MY SKILLS</h2>
-
-            <div className="row">
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={40} text={`${40}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">AWS</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={40} text={`${40}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Node.js</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={50} text={`${50}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Python</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={60} text={`${60}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Docker</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={60} text={`${60}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Maven</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={60} text={`${60}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Terraform</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={70} text={`${70}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Ansible</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={40} text={`${40}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Kubernetes</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={50} text={`${50}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Jenkins</h4>
-              </div>
-
-              <div className="col-md-3 d-flex flex-column">
-              <CircularProgressbar value={80} text={`${80}%`}
-                className="counterSpiner"
-                styles={buildStyles({
-                  pathColor: `var(--primary-color)`,
-                  textColor: '#fff',
-                  trailColor: 'var(--background-light)',
-                })} />
-                <br/>
-                <h4 className="text-white text-center m-auto">Git</h4>
-              </div>
+        {/* Professional Summary */}
+        <div className="row mt-5">
+          <div className="col-12">
+            <div className="summaryCard">
+              <h3>
+                <SecurityIcon /> Professional Summary
+              </h3>
+              <p>
+                Information Security and VAPT professional with hands-on experience preparing <strong>50+ OT VAPT reports</strong> for power-sector clients, including <strong>AP Transco</strong> and <strong>KSEB</strong>, and preparing an <strong>ISMS report for the SJVN power plant</strong> in Bikaner. Experienced in vulnerability assessment, security findings documentation, risk ratings, and remediation recommendations using tools such as Nessus, Nmap, and Burp Suite. Also brings a strong DevOps and AWS foundation covering cloud hosting and deployment, Linux, Docker, Kubernetes, Jenkins, Terraform, Ansible, and automated CI/CD pipelines. Seeking opportunities in Cloud Security, VAPT, and Information Security.
+              </p>
             </div>
+          </div>
         </div>
-        {/**skill section end-here */}
+
         <br/>
-        <div className="d-flex">
+        <div className="d-flex mt-5">
           <span className="divider"></span>
         </div>
+
+        {/* Technical Skills Section */}
+        <div className="skillSection mt-5">
+          <h2 className="text-center text-white">TECHNICAL SKILLS</h2>
+
+          {/* Circular meters for core skill areas */}
+          <div className="row">
+            {skillMeters.map((meter, index) => (
+              <div key={index} className="col-6 col-md-3 d-flex flex-column mb-4">
+                <CircularProgressbar
+                  value={meter.value}
+                  text={`${meter.value}%`}
+                  className="counterSpiner"
+                  styles={buildStyles({
+                    pathColor: `var(--primary-color)`,
+                    textColor: '#fff',
+                    trailColor: 'var(--background-light)',
+                  })}
+                />
+                <h4 className="text-white text-center m-auto mt-3">{meter.name}</h4>
+              </div>
+            ))}
+          </div>
+
+          {/* Categorized Badges */}
+          <div className="row mt-4">
+            {skillCategories.map((cat, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6 mb-4">
+                <div className="skillCategoryCard">
+                  <h3>
+                    <span style={{ color: "var(--primary-color)" }}>{cat.icon}</span> {cat.title}
+                  </h3>
+                  <div>
+                    {cat.skills.map((skill, sIdx) => (
+                      <span key={sIdx} className="skillBadge">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <br/>
-        <div className="experienceSection">
-          <h2 className="text-center text-white">EXPERIENCE & EDUCATION</h2>
+        <div className="d-flex mt-4">
+          <span className="divider"></span>
+        </div>
+
+        {/* Professional Experience Section */}
+        <div className="experienceSection mt-5">
+          <h2 className="text-center text-white">PROFESSIONAL EXPERIENCE</h2>
 
           <div className="row">
-            <div className="col-md-6">
-              <div className="box d-flex">
-                <div className="left">
-                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
-                  <BusinessCenterIcon/>
-                  </span>
-                </div>
-                <div className="right pl-4">
-                  <div className="badge badge-default">august 2022-august 2025</div>
-                  <h4 className="mt-3 mb-3">Bachelor of Computer Application (BCA) - <span>University of Rajasthan, Jaipur | University Commerce College | Graduating in 2025</span></h4>
-                  <p className="text-white">Focused on Computer Applications with expertise in programming (C, C++, Python, PHP, Java) and hands-on experience in cloud computing and DevOps.Skilled in database management, and object-oriented programming. Academic highlights include projects such as an online examination site. Certifications and practical exposure enhance proficiency in modern development workflows and tools.</p>
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="col-md-6 mb-4">
+                <div className="box d-flex">
+                  <div className="left">
+                    <span className="icon rounded-circle d-flex justify-content-center align-items-center">
+                      <BusinessCenterIcon/>
+                    </span>
+                  </div>
+                  <div className="right pl-4 w-100">
+                    <div className="badge badge-default">{exp.period}</div>
+                    <h4 className="mt-3 mb-2">{exp.role} - <span>{exp.company}</span></h4>
+                    <ul>
+                      {exp.points.map((pt, pIdx) => (
+                        <li key={pIdx}>{pt}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="box d-flex">
-                <div className="left">
-                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
-                  <BusinessCenterIcon/>
-                  </span>
-                </div>
-                <div className="right pl-4">
-                  <div className="badge badge-default">June 2023-August 2023</div>
-                  <h4 className="mt-3 mb-3">Python Training Program - <span>Zeetron Networks</span></h4>
-                  <p className="text-white">Completed an intensive Python training program focused on developing strong programming foundations and practical problem-solving skills. Covered key topics, including Python fundamentals, object-oriented programming,Gained hands-on experience by working on real-world projects and coding challenges, enhancing proficiency in Python scripting.</p>
-                </div>
-              </div>
-            </div>
+        <br/>
+        <div className="d-flex">
+          <span className="divider"></span>
+        </div>
 
-            <div className="col-md-6">
-              <div className="box d-flex">
-                <div className="left">
-                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
-                  <BusinessCenterIcon/>
-                  </span>
-                </div>
-                <div className="right pl-4">
-                  <div className="badge badge-default">october 2023-May 2024</div>
-                  <h4 className="mt-3 mb-3">DevOps Intern - <span>Zeetron Networks</span></h4>
-                  <p className="text-white">Experienced in implementing an end-to-end CI/CD pipeline using Jenkins, Git/GitHub, Docker, Terraform, Ansible, and Kubernetes, I specialize in DevOps, Cloud Computing, and Computer Networking. Proficient in AWS services including EC2, S3, IAM, and VPC, I bring expertise in tools like Docker Swarm, Kubernetes, Ansible, and Terraform. With additional skills in Python, SQL, Red Hat Linux, and Solution Architecture, I excel in delivering scalable and efficient cloud-based solutions.</p>
-                </div>
-              </div>
+        {/* Education Section */}
+        <div className="experienceSection mt-5">
+          <h2 className="text-center text-white">EDUCATION</h2>
 
-              <div className="box d-flex">
-                <div className="left">
-                  <span className="icon rounded-circle d-flex justify-content-center align-items-center">
-                  <BusinessCenterIcon/>
-                  </span>
-                </div>
-                <div className="right pl-4">
-                  <div className="badge badge-default">May 2024-August 2024</div>
-                  <h4 className="mt-3 mb-3">DevOps Intern - <span>HungryPixel Technologies</span></h4>
-                  <p className="text-white">As a DevOps Intern, I worked on AWS Automation, including S3 website hosting, Amplify app deployment, Certificate Manager, Route 53, and CloudFront management using AWS SDK in Node.js. This experience enhanced my AWS and DevOps skills.</p>
+          <div className="row">
+            {educations.map((edu, idx) => (
+              <div key={idx} className="col-md-4 mb-4">
+                <div className="box d-flex flex-column h-100">
+                  <div className="d-flex align-items-center mb-3">
+                    <span className="icon rounded-circle d-flex justify-content-center align-items-center mr-3" style={{ marginRight: '16px' }}>
+                      <SchoolIcon />
+                    </span>
+                    <div className="badge badge-default">{edu.period}</div>
+                  </div>
+                  <h4 className="mt-2 mb-2">{edu.degree}</h4>
+                  <p style={{ color: 'var(--accent-orange)', fontWeight: 600, fontSize: '0.95rem', marginBottom: '8px' }}>
+                    {edu.institution}
+                  </p>
+                  <p className="text-white mt-auto">{edu.description}</p>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        <br/>
+        <div className="d-flex">
+          <span className="divider"></span>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="experienceSection mt-5">
+          <h2 className="text-center text-white">CERTIFICATIONS &amp; CREDENTIALS</h2>
+
+          <div className="row">
+            {certifications.map((cert, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6 mb-3">
+                <div className="certCard">
+                  <div className="icon">
+                    <WorkspacePremiumIcon />
+                  </div>
+                  <div>
+                    <h4>{cert.title}</h4>
+                    <p>{cert.issuer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <br/>
+        <div className="d-flex mt-4">
+          <span className="divider"></span>
+        </div>
+
+        {/* Activities Section */}
+        <div className="experienceSection mt-5 mb-5">
+          <h2 className="text-center text-white">CO-CURRICULAR &amp; ACTIVITIES</h2>
+
+          <div className="row">
+            {activities.map((act, idx) => (
+              <div key={idx} className="col-md-6 mb-3">
+                <div className="activityCard">
+                  <div className="icon">
+                    <MilitaryTechIcon />
+                  </div>
+                  <div>
+                    <h4>{act.title}</h4>
+                    <p style={{ color: 'var(--accent-orange)', fontWeight: 600, marginBottom: '4px' }}>
+                      {act.unit}
+                    </p>
+                    <p>{act.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

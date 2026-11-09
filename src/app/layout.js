@@ -6,8 +6,8 @@ import ClientLayout from "./components/ClientLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tanmay Ola - Portfolio",
-  description: "Personal portfolio website of Tanmay Ola - DevOps Engineer and Full Stack Developer",
+  title: "Tanmay Ola | Information Security & VAPT Consultant | DevOps & Cloud",
+  description: "Portfolio of Tanmay Ola - Information Security and VAPT professional, AWS Cloud & DevOps Engineer with 50+ OT VAPT reports delivered.",
 };
 
 export default function RootLayout({ children }) {

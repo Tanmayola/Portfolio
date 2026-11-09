@@ -19,7 +19,7 @@ export default function BackgroundAnimation() {
         },
         background: {
           color: {
-            value: "#000000",
+            value: "transparent",
           },
         },
         fpsLimit: 120,
@@ -40,20 +40,20 @@ export default function BackgroundAnimation() {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 180,
               duration: 0.4,
             },
           },
         },
         particles: {
           color: {
-            value: "#fa5b0f",
+            value: ["#f09433", "#e6683c", "#dc2743", "#cc2366", "#bc1888", "#833ab4"],
           },
           links: {
-            color: "#fa5b0f",
-            distance: 150,
+            color: "#e1306c",
+            distance: 140,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.22,
             width: 1,
           },
           move: {
@@ -63,28 +63,28 @@ export default function BackgroundAnimation() {
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: 1.6,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 850,
             },
-            value: 80,
+            value: 70,
           },
           opacity: {
-            value: 0.5,
+            value: { min: 0.2, max: 0.65 },
           },
           shape: {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 3.5 },
           },
         },
         detectRetina: true,
       }}
     />
   );
-} 
+}
